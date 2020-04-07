@@ -1,5 +1,8 @@
 #include <iostream>
 #include <SDL.h>
+#include <SDL_image.h>
+
+#define IMG_PATH "sonic.bmp"
 
 int main(int argc, char* argv[]) 
 {
@@ -14,6 +17,7 @@ int main(int argc, char* argv[])
 	
 	SDL_Surface* imageSurface  = NULL;
 	SDL_Surface* windowSurface = NULL;
+	SDL_Texture* img           = NULL;
 
 	SDL_Window*   window   = SDL_CreateWindow("title", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, WIDTH, HEIGHT, SDL_WINDOW_SHOWN);
 	SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, 0);
@@ -36,7 +40,12 @@ int main(int argc, char* argv[])
 
 	// Get reference to window
 	windowSurface = SDL_GetWindowSurface(window);
-	imageSurface  = SDL_LoadBMP(".\\Assets\Art\sonic.bmp");
+	imageSurface  = SDL_LoadBMP("sonic.bmp");
+	img = IMG_LoadTexture(renderer, IMG_PATH);
+
+
+
+
 	if (NULL == imageSurface) 
 	{
 		std::cout << "SDL count not load image! SDL Error: " << SDL_GetError() << std::endl;
@@ -48,7 +57,9 @@ int main(int argc, char* argv[])
 	imageSurface  = NULL;
 	windowSurface = NULL;
 
+	SDL_DestroyTexture(img);
 	SDL_DestroyWindow(window);
+	SDL_DestroyRenderer(renderer);
 	SDL_Quit();
 
 	return 0;
