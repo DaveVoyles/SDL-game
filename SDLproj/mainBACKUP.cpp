@@ -4,7 +4,8 @@
 
 #define IMG_PATH "sonic.bmp"
 
-int main(int argc, char* argv[]) 
+// Change Main back to main when ready to use again
+int Main(int argc, char* argv[]) 
 {
 	SDL_Init    (SDL_INIT_EVERYTHING);
 	if (SDL_Init(SDL_INIT_EVERYTHING) < 0)
@@ -40,7 +41,7 @@ int main(int argc, char* argv[])
 
 	// Get reference to window
 	windowSurface = SDL_GetWindowSurface(window);
-	imageSurface  = SDL_LoadBMP("sonic.bmp");
+	imageSurface  = SDL_LoadBMP("stretch.bmp");
 	img = IMG_LoadTexture(renderer, IMG_PATH);
 
 
