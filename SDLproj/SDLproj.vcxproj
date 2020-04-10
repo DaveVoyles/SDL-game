@@ -162,7 +162,6 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\..\..\..\..\Desktop\sonic.png" />
-    <Image Include="sonic.bmp" />
     <Image Include="stretch.bmp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

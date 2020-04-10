@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Resource Files\Assets">
+      <UniqueIdentifier>{15378dd3-6279-4a35-ab63-1d7b8b6a37ba}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Game.cpp">
@@ -34,14 +37,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\..\..\..\..\Desktop\sonic.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="sonic.bmp">
-      <Filter>Resource Files</Filter>
-    </Image>
     <Image Include="stretch.bmp">
-      <Filter>Resource Files</Filter>
+      <Filter>Resource Files\Assets</Filter>
+    </Image>
+    <Image Include="..\..\..\..\..\Desktop\sonic.png">
+      <Filter>Resource Files\Assets</Filter>
     </Image>
   </ItemGroup>
 </Project>
